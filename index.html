@@ -1,127 +1,78 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Heading layout example</title>
-
-<!-- Playfair Display font -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Fixed Headings Page</title>
 
 <style>
-  :root{
-    --panel-padding:28px;
-  }
-  html,body{
-    height:100%;
-    margin:0;
-    background:#000;
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-    color:#fff;
+  body {
+    font-family: "Times New Roman", serif;
+    background: #f0f0f0;
+    padding: 40px;
   }
 
-  /* Instructions text */
-  .instructions{
-    max-width:980px;
-    margin:36px auto 18px;
-    padding-left:16px;
-    font-size:28px;
-    line-height:1.2;
-    color:#fff;
-    list-style: disc;
+  .container {
+    background: white;
+    padding: 30px;
+    width: 700px;
+    margin: auto;
+    box-shadow: 0 0 10px #999;
+    position: relative;
   }
 
-  /* White panel */
-  .panel-wrap{
-    max-width:980px;
-    margin:26px auto;
-    padding:22px;
-  }
-  .panel{
-    background:#fff;
-    color:#111;
-    padding:var(--panel-padding);
-    box-shadow:0 6px 18px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.8);
-    border-radius:6px;
-    position:relative;
+  /* Heading 1 style */
+  h1 {
+    font-size: 48px;
+    margin-top: 30px;
+    text-shadow: 3px 2px pink;   /* pink text shadow */
+    border-top: 5px solid black; /* black top border */
+    padding-top: 10px;
   }
 
-  /* Heading 1 */
-  .h1{
-    font-size:68px;
-    margin:0 0 18px 0;
-    font-weight:700;
-    letter-spacing:0.5px;
-    position:relative;
-    display:inline-block;
-    padding-top:6px;
-    text-shadow: 3px 2px 0 rgba(236, 94, 131, 0.85);
+  /* Outer black border for heading 2 */
+  .box {
+    border: 3px solid black;     /* outer black border */
+    padding: 5px;
+    margin-top: 30px;
+    width: 90%;
   }
 
-  /* Thin black line above heading 1 */
-  .h1::before{
-    content:"";
-    position:absolute;
-    left:0;
-    right:0;
-    top:-12px;
-    height:6px;
-    background:#000;
-    border-radius:2px;
+  /* Inner yellow border for heading 2 */
+  .inner-box {
+    border: 3px solid yellow;    /* inner yellow border */
+    padding: 10px;
   }
 
-  /* Heading 2 box */
-  .h2-wrap{
-    border:4px solid #d9d400;
-    padding:10px 14px;
-    width:calc(100% - 28px);
-    margin:6px 0 24px 0;
-    box-sizing:border-box;
-  }
-  .h2{
-    font-size:36px;
-    margin:0;
-    font-style:italic;
+  /* Heading 2 style */
+  h2 {
+    font-style: italic;
+    margin: 0;
   }
 
-  /* Heading 3 bottom-right */
-  .h3{
-    font-size:22px;
-    font-weight:600;
-    margin:0;
-    position:absolute;
-    right:var(--panel-padding);
-    bottom:var(--panel-padding);
-    text-decoration:underline;
-  }
-
-  /* Responsive */
-  @media (max-width:640px){
-    .instructions{font-size:18px}
-    .h1{font-size:40px}
-    .h2{font-size:22px}
-    .h3{font-size:16px}
+  /* Heading 3 positioned at bottom right */
+  h3 {
+    position: absolute;
+    bottom: 15px;    /* lower position to avoid overlap */
+    right: 30px;
+    text-decoration: underline;
+    margin: 0;
   }
 </style>
 </head>
 
 <body>
-  <div class="instructions">
-    <ul style="margin:0; padding-left:26px;">
-      <li>Please create a web page as shown below. Note their outlines, texts, and fonts. Please upload the web page to the webspace and upload the link to the portal.</li>
-    </ul>
-  </div>
 
-  <div class="panel-wrap">
-    <div class="panel">
-      <h1 class="h1">This is heading 1</h1>
+<div class="container">
+  <h1>This is heading 1</h1>
 
-      <div class="h2-wrap">
-        <h2 class="h2">This is heading 2</h2>
-      </div>
-
-      <h3 class="h3">This is heading 3</h3>
+  <div class="box">
+    <div class="inner-box">
+      <h2>This is heading 2</h2>
     </div>
   </div>
+
+  <h3>This is heading 3</h3>
+</div>
+
 </body>
 </html>
