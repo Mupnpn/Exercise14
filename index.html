@@ -7,72 +7,52 @@
 <style>
   body {
     font-family: "Times New Roman", serif;
-    background: #f5f5f5;  /* light background */
+    background: #f5f5f5;
     padding: 40px;
   }
 
   .container {
-    background: white;            /* white main panel */
+    background: white;
     padding: 30px;
     width: 700px;
     margin: auto;
-    box-shadow: 0 0 10px #aaa;    /* soft shadow */
+    box-shadow: 0 0 10px #aaa;
     position: relative;
   }
 
   /* Heading 1 */
   h1 {
     font-size: 48px;
-    margin-top: 30px;
-    text-shadow: 3px 2px pink;      /* pink text shadow */
-    border-top: 5px solid black;    /* black top line */
-    padding-top: 10px;
+    margin-top: 10px;               /* closer to the top */
+    text-shadow: 3px 2px pink;
+    border-top: 2px solid black;    /* thinner black line */
+    padding-top: 5px;               /* smaller padding */
   }
 
-  /* Outer black border for heading 2 */
-  .box {
-    border: 3px solid black;        /* outer black border */
-    padding: 5px;
+  /* Outer yellow border (Heading 2) */
+  .outer-box {
+    border: 4px solid yellow;       /* outer yellow border */
+    padding: 8px;
     margin-top: 30px;
-    width: 90%;
+    width: 92%;
   }
 
-  /* Inner yellow border for heading 2 */
+  /* Inner black border */
   .inner-box {
-    border: 3px solid yellow;       /* inner yellow border */
+    border: 1.5px solid black;      /* thin black inner border */
     padding: 10px;
   }
 
-  /* Heading 2 */
+  /* Heading 2 text */
   h2 {
     font-style: italic;
     margin: 0;
   }
 
-  /* Heading 3 positioned at bottom right */
+  /* Heading 3 bottom right */
   h3 {
     position: absolute;
-    bottom: 15px;                   /* avoid overlap */
+    bottom: 15px;
     right: 30px;
     text-decoration: underline;
-    margin: 0;
-  }
-</style>
-</head>
-
-<body>
-
-<div class="container">
-  <h1>This is heading 1</h1>
-
-  <div class="box">
-    <div class="inner-box">
-      <h2>This is heading 2</h2>
-    </div>
-  </div>
-
-  <h3>This is heading 3</h3>
-</div>
-
-</body>
-</html>
+    mar
